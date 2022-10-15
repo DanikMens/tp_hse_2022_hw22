@@ -2,9 +2,9 @@ name: my
 
 on:
   push:
-    branches: [ "main", "dev"]
+    branches: [ "main", "develop"]
   pull_request:
-    branches: [ "main", "dev"]
+    branches: [ "main", "develop"]
 
   workflow_dispatch:
 
@@ -22,4 +22,4 @@ jobs:
           cd $GITHUB_WORKSPACE
       - name: run tests 
            pip install -r requirements.txt
-        run: python3 -m unittest test_tptz2.py
+        run: python3 -m unittest test_tptz2
